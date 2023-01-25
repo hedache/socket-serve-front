@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ChatService } from './services/chat.service';
+import { WebsocketService } from './services/websocket.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'basico';
+
+  constructor(
+    public wsService: WebsocketService
+  ) {}
+
 }
